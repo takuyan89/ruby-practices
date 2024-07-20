@@ -5,8 +5,8 @@ require 'date'
 
 options = {}
 opt = OptionParser.new
-opt.on('-m', Integer) { |month| options[:month] = month }
-opt.on('-y', Integer) { |year| options[:year] = year }
+opt.on('-m MONTH', Integer) { |month| options[:month] = month }
+opt.on('-y YEAR',  Integer) { |year| options[:year] = year }
 opt.parse!(ARGV)
 
 current_date = Date.today
